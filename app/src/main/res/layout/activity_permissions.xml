@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:title="@string/permissions" />
+
+    <include
+        android:id="@+id/rowAccess"
+        layout="@layout/item_permission_row" />
+
+    <include
+        android:id="@+id/rowNotif"
+        layout="@layout/item_permission_row" />
+
+    <include
+        android:id="@+id/rowUsage"
+        layout="@layout/item_permission_row" />
+
+    <include
+        android:id="@+id/rowOverlay"
+        layout="@layout/item_permission_row" />
+
+    <include
+        android:id="@+id/rowHome"
+        layout="@layout/item_permission_row" />
+</LinearLayout>

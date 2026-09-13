@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <ImageView
+        android:id="@+id/wallpaperView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/wallpaper"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wallpaper_aurora" />
+
+    <com.nextos.launcher.ui.home.ParallaxLayer
+        android:id="@+id/parallaxLayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false">
+
+        <LinearLayout
+            android:id="@+id/homeColumn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:orientation="vertical">
+
+            <com.nextos.launcher.ui.island.NextIslandView
+                android:id="@+id/nextIsland"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/homePager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:overScrollMode="never" />
+
+            <LinearLayout
+                android:id="@+id/pageDots"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+            <com.nextos.launcher.ui.glass.LiquidGlassView
+                android:id="@+id/dockGlass"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dock_height"
+                android:layout_marginStart="@dimen/dock_margin"
+                android:layout_marginEnd="@dimen/dock_margin"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/bg_dock"
+                android:clipChildren="false"
+                android:elevation="8dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dockList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp" />
+            </com.nextos.launcher.ui.glass.LiquidGlassView>
+        </LinearLayout>
+    </com.nextos.launcher.ui.home.ParallaxLayer>
+
+    <include
+        android:id="@+id/libraryOverlay"
+        layout="@layout/overlay_app_library"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/searchOverlay"
+        layout="@layout/overlay_search"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/controlOverlay"
+        layout="@layout/overlay_control_center"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/widgetMenuOverlay"
+        layout="@layout/overlay_widget_menu"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/folderOverlay"
+        layout="@layout/overlay_folder"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/editMenuOverlay"
+        layout="@layout/overlay_edit_menu"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/iconContextOverlay"
+        layout="@layout/overlay_icon_context"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:title="@string/wallpaper" />
+
+    <ImageView
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:contentDescription="@string/wallpaper"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wallpaper_aurora" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/pick_image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:text="@string/built_in_walls" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/wallAurora"
+            android:layout_width="0dp"
+            android:layout_height="88dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/wallpaper"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wallpaper_aurora" />
+
+        <ImageView
+            android:id="@+id/wallDusk"
+            android:layout_width="0dp"
+            android:layout_height="88dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/wallpaper"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wallpaper_dusk" />
+
+        <ImageView
+            android:id="@+id/wallSand"
+            android:layout_width="0dp"
+            android:layout_height="88dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/wallpaper"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wallpaper_sand" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnApply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/apply_wallpaper" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+-keep class com.nextos.launcher.** { *; }
+-keep class * extends android.app.Service
+-keep class * extends android.content.BroadcastReceiver
+-keep class * extends android.accessibilityservice.AccessibilityService
+-keep class * extends android.service.notification.NotificationListenerService
+-dontwarn kotlinx.**

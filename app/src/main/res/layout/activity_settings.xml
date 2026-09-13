@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:title="@string/settings" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/settingsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/appearance"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="12sp" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/darkModeGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/modeSystem"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/use_system_dark" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/modeLight"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/force_light" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/modeDark"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/force_dark" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swGlass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:checked="true"
+                android:text="@string/liquid_glass" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swSpring"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/spring_anim" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swParallax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/parallax" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swIsland"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/next_island_enable" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swLabels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/show_labels" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swLockIntegrated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/integrated_lock" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/grid_size"
+                android:textColor="?android:textColorSecondary" />
+
+            <SeekBar
+                android:id="@+id/gridSeek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="2"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/gridLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 x 6"
+                android:textColor="?android:textColorPrimary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnWallpaper"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/wallpaper" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIcons"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/customize_icons" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHidden"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hidden_apps" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAppLock"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_lock" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPermissions"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/permissions" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDefaultHome"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/default_home" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/about_body"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

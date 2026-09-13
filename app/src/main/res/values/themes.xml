@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NextOS" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/next_blue</item>
+        <item name="colorPrimaryContainer">@color/next_sky</item>
+        <item name="colorSecondary">@color/next_lavender</item>
+        <item name="colorTertiary">@color/next_mint</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:windowBackground">@color/next_sand</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowEnterTransition">@transition/next_enter</item>
+        <item name="android:windowExitTransition">@transition/next_exit</item>
+        <item name="android:windowReenterTransition">@transition/next_enter</item>
+        <item name="shapeAppearanceSmallComponent">@style/Shape.NextOS.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/Shape.NextOS.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/Shape.NextOS.Large</item>
+    </style>
+
+    <style name="Theme.NextOS.Wallpaper" parent="Theme.NextOS">
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowAnimationStyle">@style/Animation.NextOS.Activity</item>
+    </style>
+
+    <style name="Theme.NextOS.Lock" parent="Theme.NextOS.Wallpaper">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="Theme.NextOS.Glass" parent="Theme.NextOS">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.35</item>
+    </style>
+
+    <style name="Shape.NextOS.Small" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+    <style name="Shape.NextOS.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">22dp</item>
+    </style>
+    <style name="Shape.NextOS.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">32dp</item>
+    </style>
+
+    <style name="Text.NextOS.Label" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/label</item>
+        <item name="android:shadowColor">#66000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">3</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Animation.NextOS.Activity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/next_open_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/next_open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/next_close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/next_close_exit</item>
+    </style>
+</resources>

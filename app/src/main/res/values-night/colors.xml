@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_primary">#F5F5F7</color>
+    <color name="text_secondary">#A1A1A6</color>
+    <color name="text_on_glass">#F5F5F7</color>
+    <color name="label">#F5F5F7</color>
+
+    <color name="glass_light">#661C1C1E</color>
+    <color name="glass_medium">#991C1C1E</color>
+    <color name="glass_stroke">#22FFFFFF</color>
+    <color name="glass_highlight">#18FFFFFF</color>
+    <color name="dock_glass">#732C2C2E</color>
+    <color name="scrim">#99000000</color>
+    <color name="island_bg">#F2000000</color>
+
+    <color name="folder_bg">#E61C1C1E</color>
+    <color name="control_tile">#33FFFFFF</color>
+    <color name="control_tile_on">#CC7EB8DA</color>
+    <color name="lock_pin_key">#33FFFFFF</color>
+</resources>

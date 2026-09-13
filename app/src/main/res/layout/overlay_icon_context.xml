@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contextRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33000000"
+    android:clickable="true">
+
+    <com.nextos.launcher.ui.glass.LiquidGlassView
+        android:id="@+id/contextSheet"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_glass"
+        android:elevation="10dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ctxRename"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingStart="18dp"
+                android:text="@string/rename"
+                android:textColor="@color/text_on_glass" />
+
+            <TextView
+                android:id="@+id/ctxHide"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingStart="18dp"
+                android:text="@string/hide"
+                android:textColor="@color/text_on_glass" />
+
+            <TextView
+                android:id="@+id/ctxLock"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingStart="18dp"
+                android:text="@string/lock"
+                android:textColor="@color/text_on_glass" />
+
+            <TextView
+                android:id="@+id/ctxFolder"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingStart="18dp"
+                android:text="@string/create_folder"
+                android:textColor="@color/text_on_glass" />
+
+            <TextView
+                android:id="@+id/ctxRemove"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingStart="18dp"
+                android:text="@string/remove"
+                android:textColor="@color/danger" />
+        </LinearLayout>
+    </com.nextos.launcher.ui.glass.LiquidGlassView>
+</FrameLayout>

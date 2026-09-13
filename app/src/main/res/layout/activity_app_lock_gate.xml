@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper_dusk"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="72dp"
+        android:contentDescription="@string/app_lock"
+        android:src="@drawable/ic_lock" />
+
+    <TextView
+        android:id="@+id/gateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/enter_pin"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/gatePin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:inputType="numberPassword"
+        android:maxLength="6"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnUnlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/unlock" />
+</LinearLayout>
